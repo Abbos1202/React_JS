@@ -82,7 +82,7 @@
 
 
 
-// 2 dars => 
+// 2 - dars => 
 
 // ---props 
 // ---components
@@ -106,3 +106,12 @@
 // export => 2 turi mavjud
 // ---export default Student => Bitta faylda faqat bitta default qilsa bo'ladi
 // ---export {Department, Student}
+
+
+// 3 - dars
+
+// ---satate
+// ---constructor
+// ---super
+// ---onClick
+// ---onChange
