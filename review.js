@@ -79,3 +79,30 @@
 // pwd => biz turgan papkani ko'rsatib beradi
 
 // Terminal bilan biz turgan papka nomi bir xil bo'lishi kerak
+
+
+
+// 2 dars => 
+
+// ---props 
+// ---components
+// ---export
+// ---import
+// ---props children
+
+// Components => 2 turi mavjud
+// ---class component
+// ---functional componet
+
+
+// class App extends React.Component{
+//   render() {   => Bu ma'lumotlarni browser da ko'rsatib beradi
+//     return(
+//       <div></div>
+//     )
+//   }
+// }
+
+// export => 2 turi mavjud
+// ---export default Student => Bitta faylda faqat bitta default qilsa bo'ladi
+// ---export {Department, Student}
