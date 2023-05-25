@@ -81,6 +81,9 @@
 // Terminal bilan biz turgan papka nomi bir xil bo'lishi kerak
 
 
+// ========================================
+// ========================================
+
 
 // 2 - dars => 
 
@@ -108,6 +111,9 @@
 // ---export {Department, Student}
 
 
+// ========================================
+// ========================================
+
 // 3 - dars
 
 // ---satate
@@ -125,3 +131,14 @@
 // let count = 0; => bunda oddiy javascript action bo'ladi va faqat console da o'zgarishi mumkin
 
 // constructor super => state yaratish uchun kerak bo'ladi
+
+
+// ========================================
+// ========================================
+
+// 4 - dars
+
+// ---function call
+// ---multi state change
+// ---students list
+

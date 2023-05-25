@@ -1,61 +1,20 @@
-
-
-class Component {}
-
-
-class Student extends Component {
-    constructor(props){
-        super(props)
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//     function Test(title) {
-//     console.log(`Hi ${title}`);
-//     console.log(`Hi ${title}`);
-//     console.log(`Hi ${title}`);
+// const getName = (title) => {
+// console.log(title);
 // }
 
-// Test('React');
-// Test('Angular');
-// Test('Vue');
+// const call = () => getName('hey');
 
 
-// class Component {
- 
-//     getName() {
-        
-//     }
-// }
+// call();
 
 
-// class Student extends Component {}
+const obj = {
+    name: 'John',
+    surname: 'Brown'
+};
 
-// let name =  "Hi";
+const status = 'name';
 
-// const obj = {
-//   name: "Webbrain",
-// }
 
-// const {name: newName} = obj;
-
-// console.log(obj.name);
-// console.log(newName);
+console.log(obj.name, obj.surname);
+console.log(obj[status]);

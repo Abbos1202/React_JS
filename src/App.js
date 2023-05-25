@@ -1,10 +1,10 @@
 import React from 'react';
-import Table from './Table';
+import State from './state';
 
 const App = () => {
   return (
     <div>
-       <Table />
+      <State/>
     </div>
   )
 }
