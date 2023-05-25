@@ -111,7 +111,17 @@
 // 3 - dars
 
 // ---satate
+// ---setState
 // ---constructor
 // ---super
-// ---onClick
-// ---onChange
+// ---onClick => button
+// ---onChange => select, input checkbox
+
+
+// satate => console da o'zgargan ma'lumotni browserda ko'rsatib beradi
+
+// setState => ma'lumotni re-render qilib beradi va browserda ma'lumot o'zgaradi
+
+// let count = 0; => bunda oddiy javascript action bo'ladi va faqat console da o'zgarishi mumkin
+
+// constructor super => state yaratish uchun kerak bo'ladi

@@ -1,10 +1,10 @@
 import React from 'react';
-import Fruits from './components/fruits.jsx';
+import State from './State';
 
 const App = () => {
   return (
     <div>
-      <Fruits />
+       <State />
     </div>
   )
 }
