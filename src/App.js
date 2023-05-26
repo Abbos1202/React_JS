@@ -1,10 +1,10 @@
 import React from 'react';
-import State from './state';
+import Styled from './styled';
 
 const App = () => {
   return (
     <div>
-      <State/>
+      <Styled/>
     </div>
   )
 }
