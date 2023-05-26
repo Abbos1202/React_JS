@@ -142,3 +142,24 @@
 // ---multi state change
 // ---students list
 
+// function call => 
+
+{/* <input onChange={onSurnameChange} type="text" placeholder="surname" /> */ }
+{/* <input onChange={(e) => onSurnameChange(e,'hey')} type="text" placeholder="surname" /> */ }
+{/* <input onChange={(e) => onSurnameChange(e)} type="text" placeholder="surname" /> */ }
+
+
+// multi state change  =>
+
+// const onChange = (e) => {
+//     this.setState({ [e.target.name]: e.target.value });
+//   };
+
+{/* <input onChange={onChange} name="name" type="text" placeholder="name" />
+<input onChange={onChange} name="surname" type="text" placeholder="surname" /> */}
+
+
+// 5 - dars
+
+// ---CRUD => CREATE READ UPDATE DELETE
+// ---Advanced
