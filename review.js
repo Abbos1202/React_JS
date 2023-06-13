@@ -271,3 +271,26 @@
 //   }
 // }
 
+// ===========================================
+// ===========================================
+// 8 - dars
+
+// if()
+// ternary operator (?)
+// navbar, attr, container, Components
+
+// 9 - 10 - dars
+
+// YouTube Clone
+// Lifting state up
+// Search movies
+// delete moveies
+
+// =======================
+// =======================
+// 11 - dars
+
+// key={value.id} => Agar ma'lumotlarni map qilsak key beramiz va asosan value.id beriladi
+// key={value.id} => Agar map qilinganda key berilmasa malumotlarni to'liq chizadi va optimization ga ta'sir qiladi ya'ni proyektni sekinlashtiradi
+// key={index} => Agar key ga index berilsa bunda ma'lumotni id si yo'q bo'lsa beriladi va console dagi error ni yo'q qila oladi holos, bunda ma'lumotlarni to'liq chizadi
+// key=>{index} => ma'lumotni map qilinganda re-create qilib beradi va proyectda index berish tavsiya qilinmaydi
