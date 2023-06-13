@@ -1,18 +1,15 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.container {
-  display: flex;
-}
-
-.link {
-  margin: 10px;
-  cursor: pointer;
-}
-
-.active {
-  color: green;
+body {
+  background-color: blue;
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
 }
