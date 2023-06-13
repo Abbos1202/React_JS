@@ -1,59 +1,18 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-input {
-    margin-top: 20px;
+
+.container {
+  display: flex;
 }
-table {
-    margin: 0 auto;
-    width: 60%;
-    height: 230px;
-    border-collapse: collapse;
+
+.link {
+  margin: 10px;
+  cursor: pointer;
 }
-.add {
-    width: 40px;
-    height: 25px;
-    border: none;
-    color: white;
-    background-color: cadetblue;
-}
-.add:active {
-    transform: scale(0.95);
-}
-.add:hover {
-    background-color: coral;
-}
-table td {
-    text-align: center;
-}
-.button_1 {
-    width: 50px;
-    height: 20px;
-    border: none;
-    color: white;
-    cursor: pointer;
-    margin-right: 10px;
-    background-color: coral;
-}
-.button_1:active{
-    transform: scale(0.90);
-}
-.button_1:hover{
-    background-color: chartreuse;
-}
-.button_2 {
-    width: 50px;
-    height: 20px;
-    border: none;
-    cursor: pointer;
-    color: white;
-    background-color: chocolate;
-}
-.button_2:active{
-    transform: scale(0.90);
-}
-.button_2:hover{
-    background-color: crimson;
+
+.active {
+  color: green;
 }

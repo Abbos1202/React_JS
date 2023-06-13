@@ -124,7 +124,7 @@
 // ---onChange => select, input checkbox
 
 
-// satate => console da o'zgargan ma'lumotni browserda ko'rsatib beradi
+// state => console da o'zgargan ma'lumotni browserda ko'rsatib beradi
 
 // setState => ma'lumotni re-render qilib beradi va browserda ma'lumot o'zgaradi
 
@@ -181,7 +181,7 @@
 
 // export qilishni ham 2 xil usuli bor =>
 // 1 - export const Container = styled('div')``
-// 2 - export const Container = styled('div')``
+// 2 - const Container = styled('div')``
 // export {Container}
 
 // props => 3 xil turi mavjud
