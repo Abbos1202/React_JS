@@ -1,54 +1,60 @@
-import styled, { css } from 'styled-components';
+import styled, { css,keyframes } from 'styled-components';
 
 export const Container = styled('div')`
-    display: flex;
-    background-color: coral;
-    color: black;
-    padding: 20px;
+    margin: 20px;
+`;
+const common = css`
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   width: 200px;
+   height: 40px;
+   margin: 10px;
+   background-color: coral;
+   border-radius: 10px;
+   cursor: pointer;
+   &:active{
+    transform: scale(0.97);
+    opacity: 0.7;
+   }
+`
+const rotate = keyframes`
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
 `;
 
-const common = css`
-   color: blue;
-   font-family: bold;
-   font-weight: 400px;
-   padding: 10px;
-   border: 2px solid black;
-   height: fit-content;
-   font-size: 20px;
-`
-
-export const Title = styled.h1`
+export const Button = styled.div`
    ${common}
-   margin: 10px;
-`
-export const Desc = styled.h1`
+`;
+
+export const ActiveButton = styled('div')`
    ${common}
-   font-size: 12px;
-   color: ${({ left }) => left ? "red" : "green"};
-`
+   height: 50px;
+`;
 
-const getSize = (props) => {
-    switch (props.type) {
-        case 'large':
-            return '200px';
-        case 'medium':
-            return '150px';
-        case 'small':
-            return '100px';
-        default:
-            return '150px';
-    }
-}
+export const Rotate = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid coral;
+  animation: ${rotate} 2s linear infinite;
+`;
 
-export const Box = styled.div`
-    width: ${getSize};
-    height: ${getSize};
-    background: ${(props) => props.bg};
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: blue;
-    margin: 10px;
-    font-size: 28px;
-    border: 2px solid blue;
+export const Theme = styled.button`
+   width: 200px;
+   height: 40px;
+   background-color: blue;
+   color: white;
+   border-radius: 10px;
+   &:active {
+    transform: scale(0.96);
+   }
 `
