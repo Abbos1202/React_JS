@@ -79,3 +79,89 @@
 // pwd => biz turgan papkani ko'rsatib beradi
 
 // Terminal bilan biz turgan papka nomi bir xil bo'lishi kerak
+
+
+// ============================================================
+// ============================================================
+
+// lesson 2
+
+// ---props 
+// ---components
+// ---export
+// ---import
+// ---props children
+
+// Components => 2 turi mavjud
+// ---class component
+// ---functional componet
+
+
+// class App extends React.Component{
+//   render() {   => Bu ma'lumotlarni browser da ko'rsatib beradi
+//     return(
+//       <div></div>
+//     )
+//   }
+// }
+
+// export => 2 turi mavjud
+// ---export default Student => Bitta faylda faqat bitta default qilsa bo'ladi
+// ---export {Department, Student}
+
+
+// ============================================================
+// ============================================================
+
+// lesson 3
+
+// ---satate
+// ---setState
+// ---constructor
+// ---super
+// ---onClick => button
+// ---onChange => select, input checkbox
+
+
+// satate => console da o'zgargan ma'lumotni browserda ko'rsatib beradi
+
+// setState => ma'lumotni re-render qilib beradi va browserda ma'lumot o'zgaradi
+
+// let count = 0; => bunda oddiy javascript action bo'ladi va faqat console da o'zgarishi mumkin
+
+// constructor super => state yaratish uchun kerak bo'ladi
+
+
+// ============================================================
+// ============================================================
+
+// lesson 4
+
+// ---function call
+// ---multi state change
+// ---students list
+
+// function call => 
+
+{/* <input onChange={onSurnameChange} type="text" placeholder="surname" /> */ }
+{/* <input onChange={(e) => onSurnameChange(e,'hey')} type="text" placeholder="surname" /> */ }
+{/* <input onChange={(e) => onSurnameChange(e)} type="text" placeholder="surname" /> */ }
+
+
+// multi state change  =>
+
+// const onChange = (e) => {
+//     this.setState({ [e.target.name]: e.target.value });
+//   };
+
+{/* <input onChange={onChange} name="name" type="text" placeholder="name" />
+<input onChange={onChange} name="surname" type="text" placeholder="surname" /> */}
+
+
+// ============================================================
+// ============================================================
+
+// lesson 5
+
+// ---CRUD => CREATE READ UPDATE DELETE
+// ---Advanced

@@ -1,11 +1,12 @@
 import React from 'react';
+import State from './State';
 
-function App() {
+const App = () => {
   return (
     <div>
-      hi again
+      <State/>
     </div>
   )
 }
 
-export default App;
+export default App
