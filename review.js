@@ -302,8 +302,8 @@
 // delete moveies
 
 
-// =====================================
-// =====================================
+// =========================================================
+// =========================================================
 
 // lesson 10
 
@@ -311,3 +311,63 @@
 // key={value.id} => Agar map qilinganda key berilmasa malumotlarni to'liq chizadi va optimization ga ta'sir qiladi ya'ni proyektni sekinlashtiradi
 // key={index} => Agar key ga index berilsa bunda ma'lumotni id si yo'q bo'lsa beriladi va console dagi error ni yo'q qila oladi holos, bunda ma'lumotlarni to'liq chizadi
 // key=>{index} => ma'lumotni map qilinganda re-create qilib beradi va proyectda index berish tavsiya qilinmaydi
+
+// lesson 11
+
+// Form
+
+
+// ==========================================================
+// ==========================================================
+
+// lesson 12
+
+
+// LifeCycle methods
+
+// constructor(){} => eng birinchi yuradi
+// componentWillMount(){} => birinchi render dan oldin yuradi
+// render(){} => constructordan keyin yuradi
+// componentDidMount(){} => birinchi render dan keyin yuradi
+// componentWillReceiveProps(){} => parentdan child ga prop kelgan vaqtda
+// shouldComponentUpdate(){} => componentni update qilish yoki qilmaslik tru false return qiladi
+// componentWillUpdate(){} => renderdan oldin va prop kelishidan keyin
+// componentDidUpdate(){} => DOM created
+// componentWillUnmount(){} => after DOM element removed
+
+
+// bind => ES 6 chiqmasidan oldin functiondagi error ni yo'q qilish uchun ishlatilingan
+// bind(this) => oddiy funksiyani ishlatish uchun this berishimiz kerak
+
+// bind => 3 xil usuli bor =>
+
+// import React, { Component } from "react";
+
+// export default class Binding extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       count: 0,
+//     };
+//     // this.plus = this.plus.bind(this)
+//   }
+//   plus() {
+//     this.setState({ count: this.state.count + 1 });
+//     console.log(this);
+//   }
+
+//   render() {
+//     // const plus = () => {
+//     //   this.setState({count: this.state.count + 1})
+//     // }
+//     return (
+//       <div>
+//         <h1>ReactJs Binding</h1>
+//         <h1>{this.state.count}</h1>
+//         {/* <button onClick={this.plus.bind(this)}>Click me</button> */}
+//         {/* <button onClick={this.plus}>Click me</button> */}
+//         <button onClick={() => this.plus()}>Click me</button>
+//       </div>
+//     );
+//   }
+// }
