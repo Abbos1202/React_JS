@@ -108,3 +108,25 @@
 // export => 2 turi mavjud
 // ---export default Student => Bitta faylda faqat bitta default qilsa bo'ladi
 // ---export {Department, Student}
+
+
+// ============================================================
+// ============================================================
+
+// lesson 3
+
+// ---satate
+// ---setState
+// ---constructor
+// ---super
+// ---onClick => button
+// ---onChange => select, input checkbox
+
+
+// satate => console da o'zgargan ma'lumotni browserda ko'rsatib beradi
+
+// setState => ma'lumotni re-render qilib beradi va browserda ma'lumot o'zgaradi
+
+// let count = 0; => bunda oddiy javascript action bo'ladi va faqat console da o'zgarishi mumkin
+
+// constructor super => state yaratish uchun kerak bo'ladi
