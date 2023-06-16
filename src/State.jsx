@@ -1,113 +1,149 @@
 import React, { Component } from "react";
-import { student } from "./mock";
+import { Employees } from "./mock.js";
 
 export default class State extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: student,
+      dataList: Employees,
       name: "",
+      age: "",
+      address: "",
       status: "",
-      search: "",
-      active: null,
+      select: null,
     };
   }
   render() {
-    const onChange = (e) => {
-      this.setState({ [e.target.name]: e.target.value });
-    };
-    const onSearch = (e) => {
+    const filteredInfo = (e) => {
       const { value } = e.target;
-      let filtered = student.filter((item) =>
+      let filtered = Employees.filter((item) =>
         `${item[this.state.search]}`.toLowerCase().includes(value.toLowerCase())
       );
-
-      this.setState({ data: filtered });
+      this.setState({
+        dataList: filtered,
+      });
     };
+
     const onSelect = (e) => {
       this.setState({ search: e.target.value });
     };
+
     const onDelete = (id) => {
-      let filtered = this.state.data.filter((value) => value.id !== id);
-      this.setState({ data: filtered });
+      // console.log(id);
+      let filtered = this.state.dataList.filter((value) => value.id !== id);
+
+      this.setState({
+        dataList: filtered,
+      });
+    };
+    const onChange = (e) => {
+      this.setState({
+        [e.target.name]: e.target.value,
+      });
     };
     const onCreate = () => {
-      const user = {
+      let user = {
         id: Date.now(),
         name: this.state.name,
+        age: this.state.age,
+        address: this.state.address,
         status: this.state.status,
       };
-      console.log(user);
+
       this.setState({
-        data: [...this.state.data, user],
+        dataList: [...this.state.dataList, user],
         name: "",
+        age: "",
+        address: "",
         status: "",
       });
     };
-    const onUpdate = ({ id, name, status }, isActive) => {
+    const onEdit = ({ id, name, age, address, status }, isActive) => {
       if (isActive) {
-        let res = this.state.data.map((value) =>
-          value.id === this.state.active.id
-            ? { ...value, name: this.state.name, status: this.state.status }
+        let updated = this.state.dataList.map((value) =>
+          value.id === this.state.select.id
+            ? {
+                ...value,
+                name: this.state.name,
+                age: this.state.age,
+                address: this.state.address,
+                status: this.state.status,
+              }
             : value
         );
-        this.setState({ active: null, data: res });
+        this.setState({ select: null, dataList: updated });
       } else {
         this.setState({
           name: name,
+          age: age,
+          address: address,
           status: status,
-          active: { id, name, status },
+          select: { id, name, age, address, status },
         });
       }
     };
-
     return (
       <div>
+        <input onChange={filteredInfo} type="text" placeholder="search..." />
+        <select onChange={onSelect}>
+          <option value="id">ID</option>
+          <option value="name">NAME</option>
+          <option value="address">ADDRESS</option>
+          <option value="status">STATUS</option>
+        </select>
+        <hr />
         <h1>Name: {this.state.name}</h1>
+        <h1>Age: {this.state.age}</h1>
+        <h1>Address: {this.state.address}</h1>
         <h1>Status: {this.state.status}</h1>
         <input
           onChange={onChange}
           value={this.state.name}
           name="name"
           type="text"
-          placeholder="name"
+          placeholder="Name"
+        />
+        <input
+          onChange={onChange}
+          value={this.state.age}
+          name="age"
+          type="text"
+          placeholder="Age"
+        />
+        <input
+          onChange={onChange}
+          value={this.state.address}
+          name="address"
+          type="text"
+          placeholder="Address"
         />
         <input
           onChange={onChange}
           value={this.state.status}
           name="status"
           type="text"
-          placeholder="status"
+          placeholder="Status"
         />
-        <button className="add" onClick={onCreate}>
-          Add
-        </button>
-        <hr />
-        <input onChange={onSearch} type="text" placeholder="search..." />
-        <select onChange={onSelect} name="" id="">
-          <option value="id">ID</option>
-          <option value="name">NAME</option>
-          <option value="status">STATUS</option>
-        </select>
-        <hr />
-
+        <button onClick={onCreate}>Create</button>
         <table border={1}>
           <thead>
             <tr>
               <th>ID</th>
-              <th>NAME</th>
-              <th>STATUS</th>
-              <th colSpan={2}>ACTION</th>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Address</th>
+              <th>Status</th>
+              <th colSpan={2}>Action</th>
             </tr>
           </thead>
-          <tbody>
-            {this.state.data.length ? (
-              this.state.data.map(({ id, name, status }) => {
-                return (
-                  <tr key={id}>
+          {this.state.dataList.length ? (
+            this.state.dataList.map(({ id, name, age, address, status }) => {
+              return (
+                <tbody key={id}>
+                  <tr>
                     <td>{id}</td>
                     <td>
-                      {this.state.active?.id === id ? (
+                      {this.state.select?.id === id ? (
                         <input
                           onChange={onChange}
                           name="name"
@@ -119,7 +155,31 @@ export default class State extends Component {
                       )}
                     </td>
                     <td>
-                      {this.state.active?.id === id ? (
+                      {this.state.select?.id === id ? (
+                        <input
+                          onChange={onChange}
+                          name="age"
+                          value={this.state.age}
+                          type="text"
+                        />
+                      ) : (
+                        age
+                      )}
+                    </td>
+                    <td>
+                      {this.state.select?.id === id ? (
+                        <input
+                          onChange={onChange}
+                          name="address"
+                          value={this.state.address}
+                          type="text"
+                        />
+                      ) : (
+                        address
+                      )}
+                    </td>
+                    <td>
+                      {this.state.select?.id === id ? (
                         <input
                           onChange={onChange}
                           name="status"
@@ -133,30 +193,32 @@ export default class State extends Component {
                     <td>
                       <button
                         onClick={() =>
-                          onUpdate(
-                            { id, name, status },
-                            this.state.active?.id === id
+                          onEdit(
+                            { id, name, age, address, status },
+                            this.state.select?.id === id
                           )
                         }
                         className="button_1"
                       >
-                        {this.state.active?.id === id ? "Save" : "Edit"}
+                        {this.state.select?.id === id ? "Save" : "Edit"}
                       </button>
                       <button onClick={() => onDelete(id)} className="button_2">
                         Delete
                       </button>
                     </td>
                   </tr>
-                );
-              })
-            ) : (
+                </tbody>
+              );
+            })
+          ) : (
+            <tbody>
               <tr>
-                <th colSpan={4}>
+                <th colSpan={7}>
                   <h1>No data available</h1>
                 </th>
               </tr>
-            )}
-          </tbody>
+            </tbody>
+          )}
         </table>
       </div>
     );

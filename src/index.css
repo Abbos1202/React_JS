@@ -8,23 +8,10 @@ input {
 }
 table {
   margin: 0 auto;
-  width: 60%;
-  height: 230px;
+  width: 80%;
   border-collapse: collapse;
 }
-.add {
-  width: 40px;
-  height: 25px;
-  border: none;
-  color: white;
-  background-color: cadetblue;
-}
-.add:active {
-  transform: scale(0.95);
-}
-.add:hover {
-  background-color: coral;
-}
+
 table td {
   text-align: center;
 }
