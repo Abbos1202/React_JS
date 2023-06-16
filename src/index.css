@@ -1,8 +1,46 @@
-body {
-  background-color: blueviolet;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+input {
+  margin-top: 20px;
+}
+table {
+  margin: 0 auto;
+  width: 80%;
+  border-collapse: collapse;
 }
 
-.wrapper {
-  display: flex;
-  flex-wrap: wrap;
+table td {
+  text-align: center;
+}
+.button_1 {
+  width: 50px;
+  height: 20px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-right: 10px;
+  background-color: coral;
+}
+.button_1:active{
+  transform: scale(0.90);
+}
+.button_1:hover{
+  background-color: chartreuse;
+}
+.button_2 {
+  width: 50px;
+  height: 20px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: chocolate;
+}
+.button_2:active{
+  transform: scale(0.90);
+}
+.button_2:hover{
+  background-color: crimson;
 }

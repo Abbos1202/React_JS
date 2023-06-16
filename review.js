@@ -130,3 +130,13 @@
 // let count = 0; => bunda oddiy javascript action bo'ladi va faqat console da o'zgarishi mumkin
 
 // constructor super => state yaratish uchun kerak bo'ladi
+
+
+// ============================================================
+// ============================================================
+
+// lesson 4
+
+// ---function call
+// ---multi state change
+// ---students list

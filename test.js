@@ -1,22 +1,20 @@
-function Test(title) {
-    console.log(`Hi ${title}`);
-    console.log(`Hi ${title}`);
-    console.log(`Hi ${title}`);
-}
+// const getName = (title) => {
+// console.log(title);
+// }
 
-Test('React');
-Test('Angular');
-Test('Vue');
+// const call = () => getName('hey');
 
 
-class Component {
- 
-    getName() {
-        
-    }
-}
+// call();
 
 
-class Student extends Component {
+const obj = {
+    name: 'John',
+    surname: 'Brown'
+};
 
-}
+const status = 'name';
+
+
+console.log(obj.name, obj.surname);
+console.log(obj[status]);
