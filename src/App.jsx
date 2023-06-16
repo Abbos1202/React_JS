@@ -1,12 +1,12 @@
 import React from 'react';
-import State from './State';
+import Styled from './Styled';
 
 const App = () => {
   return (
     <div>
-      <State/>
+      <Styled/>
     </div>
   )
 }
 
-export default App
+export default App;

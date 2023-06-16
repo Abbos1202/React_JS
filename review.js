@@ -165,3 +165,69 @@
 
 // ---CRUD => CREATE READ UPDATE DELETE
 // ---Advanced
+
+
+// ============================================================
+// ============================================================
+
+// lesson 6
+
+// ---styled-components
+// ---{css}
+// ---props
+// ---function call
+
+// npm install styled-components@latest => eng oxirgi versiyadagi styled componentni o'rnatib beradi
+// styled-components => css o'rnida ishlatiladi va qilishimiz bo'lgan ishlarni osonashtiradi, js faylda css codeni yozish uchun ishlatiladi
+
+// styled componentni 2 xil yozishimiz mumkin =>
+// 1 - export const Container = styled('div')``
+// 2 - export const Container = styled.div``
+
+// export qilishni ham 2 xil usuli bor =>
+// 1 - export const Container = styled('div')``
+// 2 - export const Container = styled('div')``
+// export {Container}
+
+// props => 3 xil turi mavjud
+// 1 - type="large" or type="medium" or type="small" buni funksiya orqali qiymatlarini olib styled componentda ishlatish mumkin
+
+// function call =>
+// const getSize = (props) => {
+//     switch (props.type) {
+//         case 'large':
+//             return '200px';
+//         case 'medium':
+//             return '150px';
+//         case 'small':
+//             return '100px';
+//         default:
+//             return '150px';
+//     }
+// }
+// export const Box = styled.div`
+//     width: ${getSize};
+//     height: ${getSize};
+// `
+
+// 2 - bg="black" or bg="red" or bg="yellow" => bunda birinchi box ga black ikkinchisiga red uchinchisiga yellow ta'sir qiladi
+
+// 3 - left => oddiy ko'rinishda
+
+
+// common css => bir xil bo'lgan css code lar jamlanmasi
+
+// import styled, { css } from 'styled-components';
+// const common = css`
+// color: blue;
+// font-family: bold;
+// font-weight: 400px;
+// padding: 10px;
+// border: 2px solid black;
+// height: fit-content;
+// font-size: 20px;
+// `
+// export const Title = styled.h1`
+//    ${common}
+//    margin: 10px;
+// `
