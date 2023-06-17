@@ -1,20 +1,6 @@
-// const getName = (title) => {
-// console.log(title);
-// }
+const arr = ['apple', 'orange'];
 
-// const call = () => getName('hey');
+const [olma, apelsin] = arr
 
-
-// call();
-
-
-const obj = {
-    name: 'John',
-    surname: 'Brown'
-};
-
-const status = 'name';
-
-
-console.log(obj.name, obj.surname);
-console.log(obj[status]);
+// console.log(arr[0]);
+console.log(apelsin);

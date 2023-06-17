@@ -1,14 +1,9 @@
-import React, { Component } from 'react';
-// import LifeCycle from './LifeCycle';
-import Binding from './Binding';
+import React from 'react'
 
-export default class App extends Component {
-  render() {
-    return (
-      <div>
-        {/* <LifeCycle /> */}
-        <Binding />
-      </div>
-    )
-  }
+const App = () => {
+  return (
+    <div>App</div>
+  )
 }
+
+export default App

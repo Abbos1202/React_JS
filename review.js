@@ -371,3 +371,22 @@
 //     );
 //   }
 // }
+
+// ==========================================================
+// ==========================================================
+
+
+// lesson 13
+
+// React hooks => 2019 yil fevral oyida chiqqan react frameworkini yangi versiyasi
+
+// Class vs Hooks component
+// return vs without return hooks components
+
+// this in class and hooks
+
+// this => class component da bor, hooks componentda yo'q
+
+// useState=> birinchi elementi value, ikkinchisi function
+
+// primitive vs non primitive
