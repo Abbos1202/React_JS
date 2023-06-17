@@ -404,3 +404,9 @@
 // useEffect(() => {}, [name]) => faqat name o'zgarsa yuradi
 // useEffect(() => {}, [name, count]) => name ham count ham o'zgarsa yuradi
 
+// =======================================================================
+// =======================================================================
+
+// lesson 15
+
+// useReducer => redux dan keyin chiqqan va redux ni qaysidir ma'noda o'rnini bosish uchun chiqqan 
