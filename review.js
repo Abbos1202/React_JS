@@ -390,3 +390,17 @@
 // useState=> birinchi elementi value, ikkinchisi function
 
 // primitive vs non primitive
+
+
+// ======================================================================
+// ======================================================================
+
+// lesson 14
+
+// useEffect() => beckend dan malumot olib kelganda ishlaydi va react lifecycle larni o'rnini bosadi
+
+// useEffect(() => {}) => bitta parametr olishi, bu parametr object va bu har bitta o'zgarishlarni ko'rsatib boradi
+// useEffect(() => {}, []) => asosan beckenddan ma'lumot olib kelganda ishlatamiz ikkita parametr olishi va birinchi parametr object, ikkinchisi array, agar bo'sh array berilsa shu componentga kirgada bir marotaba yuradi, uni ichida qanday o'zgarish bo'lishidan qatiy nazar bir arotaba yuradi
+// useEffect(() => {}, [name]) => faqat name o'zgarsa yuradi
+// useEffect(() => {}, [name, count]) => name ham count ham o'zgarsa yuradi
+

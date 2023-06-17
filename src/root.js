@@ -1,6 +1,5 @@
 import React from "react";
 import Class from "./Class";
-import Hooks from "./Hooks";
 
 
 class Root extends React.Component{
@@ -8,7 +7,6 @@ class Root extends React.Component{
         return (
             <div style={{display: 'flex'}}>
                 <Class />
-                <Hooks />
             </div>
         )
     }

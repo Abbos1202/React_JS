@@ -1,42 +1,44 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Hooks = (props) => {
-  // const state = useState(0)
-  // console.log(state);
-  // const [count, setCount] = useState(0);
-  // const [name, setName] = useState('webbrain');
+  const [count, setCount] = useState(props.count);
+  const [name, setName] = useState("webbrain");
 
-  const [data, setData] = useState({
-    count: 0,
-    name: 'webbrain'
-  })
+  // case 1
+  useEffect(() => {
+    console.log("case 1");
+  });
+
+  // case 2
+  useEffect(() => {
+    console.log("case 2");
+  }, []);
+
+  // case 3
+  useEffect(() => {
+    setCount(props.count)
+  }, [props.count]);
+
+  // case 4
+  useEffect(() => {
+    console.log("case 4");
+  }, [name, count]);
+
+
   return (
     <div style={{ flex: 1 }}>
-      <h1>Hooks components</h1>
-      <h1>Count: {data.count}</h1>
-      <h1>Name: {data.name}</h1>
-      <button onClick={() => setData({...data, count: data.count + 1})}>Increment</button>
-      <button onClick={() => setData({...data, count: data.count - 1})}>Decrement</button>
-      <input onChange={({target}) => setData({...data, name: target.value})} type="text" value={data.name} />
+      <h1>Hooks component</h1>
+      <h1>Count: {count}</h1>
+      <h1>Name: {name}</h1>
+      <input
+        onChange={({ target }) => setName(target.value)}
+        type="text"
+        value={name}
+      />
+      <button onClick={() => setCount(count + 1)}>+</button>
+      <button onClick={() => setCount(count - 1)}>-</button>
     </div>
   );
 };
 
 export default Hooks;
-
-// const Hooks = () => {
-//   // console.log(props, 'test');
-//   return (
-//     <div style={{flex: 1}}>
-//       <h1>Hooks components</h1>
-//     </div>
-//   );
-// };
-
-// export default Hooks;
-
-// const Hook = () => (
-//   <div>
-//     <h1>Hooks components</h1>
-//   </div>
-// )
