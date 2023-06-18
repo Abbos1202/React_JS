@@ -1,12 +1,15 @@
 import React from "react";
-import Hooks from "./Hooks";
+import Navbar from './components/Navbar'
+import Body from "./components/Body";
 
 
 class Root extends React.Component {
     render() {
+      
         return (
             <div>
-                <Hooks />
+                <Navbar />
+                <Body />
             </div>
         )
     }

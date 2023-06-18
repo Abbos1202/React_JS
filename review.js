@@ -410,3 +410,23 @@
 // lesson 15
 
 // useReducer => redux dan keyin chiqqan va redux ni qaysidir ma'noda o'rnini bosish uchun chiqqan 
+
+// =======================================================================
+// =======================================================================
+
+// lesson 16 
+
+
+// prop drilling => context api prop dirilling ni oldini olib beradi va prop drilling proyektini sekinlashtiradi
+
+// state management => Context API yoki redux hisoblanadi
+
+// lifting state up => state ni yuqoriga ko'tarish manosida keldi
+
+
+// Contex API (useContext)
+
+// Context API => state management hisoblanadi va xohlagan child da ishlatishimiz mumkin
+// createContext
+// put to the store
+// useContext
