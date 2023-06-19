@@ -444,3 +444,18 @@
 // const [students, setStudent]  = Student()
 // file management
 // General context => context folder da index.jsx fayl yaratib o'sha context folderdagi context fayllarni import qilib olish va faqat bitta osha index.jsx fayldagi Context index.js da tutib olish
+
+// lesson 18
+
+// localStorage
+
+// localStorage => client browserida ma'lumotlarni saqlash
+// localStorage.setItem(name, value) => browser xotirasiga set qiladi
+// localStorage.getItem(name) => browserga get qilib beradi
+// localStorage.removeItem(name) => aynan qaysi malumotni localStorage xotirasidan delete qilish
+// localStorage.clear() => localStorage xotirasida qancha ma'lumot bo'lsa hammasini o'chiradi
+
+// array object
+
+// localStorage.setItem('count', JSON.stringify({data: count - 1}))
+// JSON.parse(localStorage.getItem('count'))

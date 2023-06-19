@@ -1,29 +1,27 @@
-import React from "react";
-import { Container, Wrapper } from "./style";
-import { Student } from "../../context/Students";
+import React, { useState } from "react";
 
 const Body = () => {
-  const [students, setStudent]  = Student()
+  const [count, setCount] = useState(Number(localStorage.getItem('count')));
 
-  const onDelete = (id) => {
-    let filtered = students.filter(value => value.id !== id)
-    setStudent(filtered)
-}
+  const plus = () => {
+    localStorage.setItem('count', JSON.stringify({data: count + 1}))
+    setCount(count + 1);
+  };
+  const minus = () => {
+    localStorage.setItem('count', JSON.stringify({data: count - 1}))
+    setCount(count - 1);
+  };
+  console.log(JSON.parse(localStorage.getItem('count')));
   return (
-    <Container>
-      <h1>Students List: {students.length}</h1>
-      {students.map((student) => {
-        return (
-          <Wrapper key={student.id}>
-            <Wrapper.Title>{student.name}</Wrapper.Title>
-            <Wrapper.Title>{student.surname}</Wrapper.Title>
-            <Wrapper.Button onClick={() =>onDelete(student.id)}>
-              Delete
-            </Wrapper.Button>
-          </Wrapper>
-        );
-      })}
-    </Container>
+    <div>
+      <h1>localStorage</h1>
+      <hr />
+      <h2>Counter: {count}</h2>
+      <button onClick={plus}>+</button>
+      <button onClick={minus}>-</button>
+      <button onClick={() =>localStorage.removeItem('count')}>remove</button>
+      <button onClick={() =>localStorage.clear()}>clear</button>
+    </div>
   );
 };
 
