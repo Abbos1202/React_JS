@@ -10,7 +10,6 @@ const Navbar = ({data, dataCall}) => {
       <h1>{dataCall('About').title}</h1>
       <h1>{dataCall('Classes').title}</h1>
       <h1>{dataCall('Contact').title}</h1>
-
     </Container>
   );
 };

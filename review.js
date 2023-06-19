@@ -475,4 +475,38 @@
 // memo => faqat child component , trigger re-render yani re-render bo'lishiga omil bo'lishi kerak
 
 // useMemo => faqat parent componentda ishlaydi va value ga return qiladi
-// useCallBack => bu ham parent componentda ishlaydi va funksiyaga return qiladi
+// useCallBack => bu ham parent componentda ishlaydi va funksiyaga return qiladi va parametr berishimiz mumkin
+
+
+// ===================================================
+// ===================================================
+
+
+// lesson 20
+
+// useRef => misol uchun bitta buttonga alert qiymat berib qachon alert qilsa ma'lumotni re-render qilib beradi
+
+// import React, { useRef } from "react";
+
+// const Uncontrolled = () => {
+//   const title = useRef("");
+//   return (
+//     <div>
+//       <h1>Uncontrolled</h1>
+//       <input ref={title} type="text" />
+//       <button
+//         onClick={() => {
+//           console.log("Uncontrolled", title);
+//           alert(title.current.value);
+//         }}
+//       >
+//         click
+//       </button>
+//     </div>
+//   );
+// };
+
+// export default Uncontrolled;
+
+
+// controlled vs uncontrolled

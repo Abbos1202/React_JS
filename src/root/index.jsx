@@ -1,13 +1,14 @@
 import React from "react";
-import Body from "../components/Body";
-
+import Controlled from "../components/Controlled";
+import Uncontrolled from "../components/Uncontrolled";
 
 class Root extends React.Component {
     render() {
       
         return (
             <div>
-                <Body />
+                <Controlled />
+                <Uncontrolled />
             </div>
         )
     }
