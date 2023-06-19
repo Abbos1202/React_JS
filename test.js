@@ -1,6 +1,6 @@
-const arr = ['apple', 'orange'];
+const obj1 = {title: 'webbrain'};
+// const obj2 = {title: 'webbrain'};
+const obj2 = obj1;
 
-const [olma, apelsin] = arr
 
-// console.log(arr[0]);
-console.log(apelsin);
+console.log(obj1 === obj2);

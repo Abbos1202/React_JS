@@ -1,26 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useMemo, useCallback } from "react";
+import Navbar from "../Navbar";
 
 const Body = () => {
-  const [count, setCount] = useState(Number(localStorage.getItem('count')));
-
-  const plus = () => {
-    localStorage.setItem('count', JSON.stringify({data: count + 1}))
-    setCount(count + 1);
-  };
-  const minus = () => {
-    localStorage.setItem('count', JSON.stringify({data: count - 1}))
-    setCount(count - 1);
-  };
-  console.log(JSON.parse(localStorage.getItem('count')));
+  const [counter, setCounter] = useState(0);
+  console.log("parent render");
+  const data = useMemo(() => {
+    return { title: "webbrain" };
+  }, []);
+  const dataCall = useCallback((param) => {
+    return { title: param };
+  }, []);
   return (
     <div>
-      <h1>localStorage</h1>
-      <hr />
-      <h2>Counter: {count}</h2>
-      <button onClick={plus}>+</button>
-      <button onClick={minus}>-</button>
-      <button onClick={() =>localStorage.removeItem('count')}>remove</button>
-      <button onClick={() =>localStorage.clear()}>clear</button>
+      <Navbar data={data}  dataCall={dataCall} />
+      <h1>Counter: {counter}</h1>
+      <button onClick={() => setCounter(counter + 1)}>+</button>
+      <button onClick={() => setCounter(counter - 1)}>-</button>
     </div>
   );
 };

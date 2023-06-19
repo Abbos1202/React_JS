@@ -445,6 +445,10 @@
 // file management
 // General context => context folder da index.jsx fayl yaratib o'sha context folderdagi context fayllarni import qilib olish va faqat bitta osha index.jsx fayldagi Context index.js da tutib olish
 
+
+// ==================================================
+// ==================================================
+
 // lesson 18
 
 // localStorage
@@ -459,3 +463,16 @@
 
 // localStorage.setItem('count', JSON.stringify({data: count - 1}))
 // JSON.parse(localStorage.getItem('count'))
+
+
+// ==================================================
+// ==================================================
+
+// lesson 19 
+
+// optimization
+
+// memo => faqat child component , trigger re-render yani re-render bo'lishiga omil bo'lishi kerak
+
+// useMemo => faqat parent componentda ishlaydi va value ga return qiladi
+// useCallBack => bu ham parent componentda ishlaydi va funksiyaga return qiladi
