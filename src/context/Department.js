@@ -1,9 +1,11 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
 
-export const StudentContext = createContext()
+export const StudentContext = createContext();
 
-const StudentList = ({ children }) => {
+export const Student = () => useContext(StudentContext)
+
+const StudentList = ({children}) => {
     const [students, setStudent] = useState([
         { id: 1, name: "Firdavs", surname: "Nazarov" },
         { id: 2, name: "Abbos", surname: "Ibrohimov" },

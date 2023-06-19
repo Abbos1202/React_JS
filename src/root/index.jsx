@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from './components/Navbar'
-import Body from "./components/Body";
+import Navbar from '../components/Navbar'
+import Body from "../components/Body";
 
 
 class Root extends React.Component {

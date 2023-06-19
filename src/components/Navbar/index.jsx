@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Container } from "./style";
-import { StudentContext } from "../../Context";
+import { StudentContext } from "../../context/Students";
 
 const Navbar = () => {
   const [students] = useContext(StudentContext);

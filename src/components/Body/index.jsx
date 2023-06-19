@@ -1,9 +1,9 @@
-import React, {useContext} from "react";
+import React from "react";
 import { Container, Wrapper } from "./style";
-import { StudentContext } from "../../Context";
+import { Student } from "../../context/Students";
 
 const Body = () => {
-  const [students, setStudent]  = useContext(StudentContext)
+  const [students, setStudent]  = Student()
 
   const onDelete = (id) => {
     let filtered = students.filter(value => value.id !== id)

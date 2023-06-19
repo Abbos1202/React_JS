@@ -430,3 +430,17 @@
 // createContext
 // put to the store
 // useContext
+
+// =======================================================================
+// =======================================================================
+
+// lesson 17
+
+// useContext advanced
+// useContext => alohida export qilib qo'ysa bo'ladi
+
+// export const Student = () => useContext(StudentContext)
+// va componentda tutib olish 
+// const [students, setStudent]  = Student()
+// file management
+// General context => context folder da index.jsx fayl yaratib o'sha context folderdagi context fayllarni import qilib olish va faqat bitta osha index.jsx fayldagi Context index.js da tutib olish
