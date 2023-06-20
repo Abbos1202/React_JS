@@ -4,6 +4,24 @@
   box-sizing: border-box;
 }
 
+.container {
+  display: flex;
+}
+
+.link {
+  margin: 10px;
+  cursor: pointer;
+}
+
+.active {
+  color: green;
+}
+
+.form {
+  background-color: black;
+  color: white;
+}
+
 button {
   margin: 10px;
 }

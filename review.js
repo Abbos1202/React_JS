@@ -510,3 +510,84 @@
 
 
 // controlled vs uncontrolled
+
+
+// ===================================================
+// ===================================================
+// lesson 21
+
+// restful API
+// fetch => beckenddan ma'lumot olib kelish uchun vosita sifatida ishlatilinadi va bu javascript funksiyasi
+// endpoint url, API link
+// CRUD
+// GET => beckenddan get qilib olish uchun ishlatilinadi
+// POST => Create qilish uchun ishlatilinadi bunda update qilsa ham bo'ladi
+// PUT => update qilish uchun ishlatilinadi
+// DELETE => delete qilih uchun
+// swagger => beckendda test qilish uchun juda foydali platforma
+// token
+// auth => authorization
+
+// HTTP status kodlari
+
+// Har bir HTTP opertsiyada server operatsiyani qanday bajarganini aniqlash uchun server tomonidan yuborilgan status kodi mavjud. HTTP status kodlari muayyan HTTP so'rovi muvaffaqiyatli bajarilgan yoki bajarilmaganligini ko'rsatadi 
+
+// Barcha http status codelar beshta toifaga bo'linadi
+// Informational responses => 100-199
+// Successful responses => 200-299
+// Redirects => 300-399
+// Client errors => 400-499
+// Server errors => 500-599
+
+// ------------------------------------->
+
+// 2XX - Success
+
+// HTTP holat kodlari so'rov qabul qilinganligini, tushunilganini, bajarilganini va uzatish rejalashtirilganidek amalga oshirilganligini ko'rsatadi
+
+// 200 => OK so'rov bajarildi
+// 201 => Created, so'rov bajarildi va natijada yangi resurs yaratildi. Bu odatda POST so'rovlari yoki ba'zi PUT so'rovlaridan keyin yuboriladigan javobdir
+// 202 => Accepted. Mijoz serverdan biror narsa yaratishni so'radi. So'rov qayta ishlash uchun qabul qilindi va lekin ishlov berish tugallanmagan
+// 203 => Non-Authentication Information. Holat kodi so'rov muvaffaqiyatli bo'lganligini, lekin biriktirilgan yuk o'zgartirilganligini ko'rsatadi
+
+
+// ------------------------------------->
+
+// 3XX - Redirection
+
+// Ushbu turdagi holat kodlari so'rovni bajarish uchun qo'shimcha harakatlar qilish kerakligini ko'rsatatdi
+
+// 300 => Multi choice. So'rovda bir nechta javob bo'lishi mumkin
+// 301 => Moved permanantly. So'ralgan manbaning URL manzili butunlay o'zgartirildi. Yangi URL javobda berilgan
+// 302 => Found. So'ralgan manbaning URL manzili vaqtincha o'zgartirildi
+// 303 => See other. So'rovga javobni GET usuli yordamida boshqa URL ostida topish mumkin
+// 304 => Not modified. Bu keshlash uchun ishlatiladi. Bu mijozga javob ozgartirilmaganligini aytadi, shuning uchun mijoz javobning bir xil keshla gan versiyasidan foydalanishni davom etishi mumkin
+// 307 => Temporary redirect. Server ushbu javobni mijozga so'ralgan manbani boshqa URL da oldingi so'rovda qo'llanilgan usul bilan olishga yonaltirish uchun yuboradi. Bu FOUND 302 HTTP jaob kodi bilan bir xil semantikaga ega, bundan mustasno, foydalanuvchi agenti ishlatiladigan HTTP usulini o'zgartirmasligi kerak. Agar birinchi so'rovda POST ishlatilingan bo'lsa, ikkinchi so'rovda POST ishlatilishi kerak
+
+
+// ------------------------------------->
+
+// 4XX - Client error
+
+// Ushbu turdagi status kodlar so'rovda noto'g'ri sintaksis mavjud ekanligini yoki bajarilmasligini anglatadi
+
+// 400 => Bad request. Koddagi noto'g'ri sintaksis tufayli server so'rovni tushuna olmadi
+// 401 => Unauthorized. Mijoz serverdan so'ralgan javobni olish uchun o'zini autentifikatsiya qilish kerak, aks holda bu ruxsatsiz so'rov sifatida ko'rib chiqiladi
+// 402 => Payment required. Bu kod kelajakda foydalanish uchun saqlagan. Ushbu kodni yaratilishning dastlabki maqsadi uni raqamli to'lov tizimlari uchun ishlatish edi, ammo bu holat kodi juda kam ishlatiladi va standart konventsiya mavjud emas
+// 403 => Forbidden. Mijoz kontentga kirish huquqiga ega emas, yani unga ruxsat yo'q, shuning uchun server so'ralgan manbani bajarishdan bosh tortmoqda. 401 Unauthorized dan farqli o'laroq, mijozning identifikatori serverga ma'lum
+// 404 => Not Found. Server so'ralgan manbani topa olmadi. Brauzerda bu URL tan olinmaganligini anglatadi. API da bu so'nggi nuqta haqiqiy ekanligini lekin resursning o'zi mavjud emasligini anglatishi ham mumkin, Serverlar ruxsatsiz mijozdan resurs mavjudligini yashirish uchun 403 taqiqlangan o'rniga ushbu javobni yuborishi mumkin. Ushbu javob kodi, ehtimol, internetda tez-tez uchraydiganligi sabali eng mashxurdir
+// 405 => Method Not Allowed. So'rov usuli server tomonidan ma'lum, ammo maqsadli manba tomonidan qo'llab-quvvatlanmaydi.Masalan, API manbani o'chirish uchun DELETE ga qo'ng'iroq qilishga ruxsat bermasligi mumkin
+// 415 => Unsupported media type. Media type berilmaganligidan kelib chiqadi
+
+// ------------------------------------->
+
+// 5XX - Server Error
+
+// Ushbu turdagi holat kodlari server yaroqli so'rovni bajara olmaganligini anglatadi
+
+// 500 => Internal Server Error. Server kodda muammo topadi va uni qanday hal qilishni bilmaydi
+// 501 => Not Implemented. Server so'rov usulini tanimaydi yoki so'rovni bajarish qobiliyatiga ega emas
+// 502 => Bad Gateway. Server so'rovni ko'rib chiqish uchun zarur bo'lgan javobni olish uchun kirish yo'li sifatida ishlayotganda, yaroqsiz javob oldi
+// 503 => Service Unavailable. Server so'rovni bajarishga tayyor emas. Umumiy sabablar - xizmat ko'rsatish uchun ishlamay qolgan yoki ortiqcha yuklangan server
+// 504 => Gateway Timeout. Ushbu xato javobi serverga kirish yo'li vazifasini bajarayotganda va vaqtida javob ololmaganda beriladi
+// 505 => HTTP Version Not Supported. So'rovda ishlatladigan HTTP versiyasi server tomonidan qo'llab-quvvatlanmaydi

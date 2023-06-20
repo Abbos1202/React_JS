@@ -1,14 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
 import Root from './root';
 import Context from './context';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.render(
   <React.StrictMode>
     <Context>
       <Root />
     </Context>
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('root')
 );

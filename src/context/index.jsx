@@ -1,21 +1,19 @@
 import React from 'react';
-import Children from'./Children';
-import Department from'./Department';
-import Factory from'./Factory';
+import Children from './Children';
+import Department from './Department';
+import Factory from './Factory';
 import Students from './Students';
 
-const Context = ({children}) => {
+export const Context = ({ children }) => {
   return (
     <Children>
+      <Factory>
         <Students>
-            <Factory>
-                <Department>
-                    {children}
-                </Department>
-            </Factory>
+          <Department>`{children}</Department>
         </Students>
+      </Factory>
     </Children>
-  )
-}
+  );
+};
 
 export default Context;
