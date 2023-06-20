@@ -607,3 +607,28 @@
 // axios => agar bodyga parametr yozadigan bo'lsak avtomatik json() ga parse qilib oladi
 
 
+// ===================================================
+// ===================================================
+
+// lesson 23 
+
+// React Router DOM 5
+
+// BrowserRouter
+// NavLink, Link => boshqa bir page ga o'tish uchun link
+// Route => o'sha page da nima ko'rsatish uchun
+// useHistory, useLocation => window location
+// useHistory => page larni orqaga yoki oldinga jonatish uchun ishlatsak bo'ladi
+// useLocation => window.location
+// Switch => bitta url da ikkita malumotni ifodalashda kerak bo'ladi
+// usePrams
+// privateRoute => page ga otganda ruxsat yo'q bo'lsa yani oldin login qilib keyin page ga o'tish uchun protected hisoblanadi
+// redirect => agar componentga redirect bersak osha manzilga linkni yo'naltiradi
+
+// Route larni yozish usullari 
+
+{/* <Route path={'/home'} component={Home} /> */}
+
+{/* <Route path={'/home'}> => bu ko'rinishda prop jo'natsa bo'ladi
+    <Home />
+</Route> */}
