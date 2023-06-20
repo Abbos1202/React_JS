@@ -514,6 +514,7 @@
 
 // ===================================================
 // ===================================================
+
 // lesson 21
 
 // restful API
@@ -591,3 +592,18 @@
 // 503 => Service Unavailable. Server so'rovni bajarishga tayyor emas. Umumiy sabablar - xizmat ko'rsatish uchun ishlamay qolgan yoki ortiqcha yuklangan server
 // 504 => Gateway Timeout. Ushbu xato javobi serverga kirish yo'li vazifasini bajarayotganda va vaqtida javob ololmaganda beriladi
 // 505 => HTTP Version Not Supported. So'rovda ishlatladigan HTTP versiyasi server tomonidan qo'llab-quvvatlanmaydi
+
+// ===================================================
+// ===================================================
+
+// lesson 22
+
+// axios
+// fetch vs axios
+// vanilla javascript va 3rd part library
+// manually vs automatic => paring or data transform
+// npm- install whatwg-fetch --save polyfill for-fetch => internet explorer da barcha browserlarda o'qishga yordam beradi
+
+// axios => agar bodyga parametr yozadigan bo'lsak avtomatik json() ga parse qilib oladi
+
+
