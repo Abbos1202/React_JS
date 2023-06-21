@@ -632,3 +632,23 @@
 {/* <Route path={'/home'}> => bu ko'rinishda prop jo'natsa bo'ladi
     <Home />
 </Route> */}
+
+
+// ===================================================
+// ===================================================
+
+// lesson 24
+
+// React Router DOM 6
+
+// redirect --> navigate
+// useHistory --> useNavigate
+// NavLink activeStyle --> style{({isActive}) => }
+// Routes, Route
+// Route => component --> element
+// Outlet
+// usePrams
+// privateRoute
+// useNavigate => javascript code bo'lganda yani button onClick bo'lganda
+// Navigate => element sifatida keladi va component ko'rinishida yoziladi
+// optimal navbar yasash
