@@ -262,7 +262,7 @@
 //     light: false,
 //   }
 //   render() {
-  
+
 //     const theme = {
 //       bg: this.state.light? "white" : "black",
 //       cl: this.state.light? "black" : "white",
@@ -627,7 +627,7 @@
 
 // Route larni yozish usullari 
 
-{/* <Route path={'/home'} component={Home} /> */}
+{/* <Route path={'/home'} component={Home} /> */ }
 
 {/* <Route path={'/home'}> => bu ko'rinishda prop jo'natsa bo'ladi
     <Home />
@@ -652,3 +652,21 @@
 // useNavigate => javascript code bo'lganda yani button onClick bo'lganda
 // Navigate => element sifatida keladi va component ko'rinishida yoziladi
 // optimal navbar yasash
+
+
+// ===================================================
+// ===================================================
+
+// lesson 25
+
+// HOC => High Order Component
+
+
+// High Order Function sintaksisi =>
+
+// const Function = (Component) => {
+//     const Updated = () => {
+//         <Component />
+//     }
+//     return Function
+// }
