@@ -696,3 +696,12 @@
 // useId => unique id yasab oladi
 // useDebugValue => custom hooks bilan ishlaydi va kerakli bo'lganda ishlatish kerak maksimal bundan yiroqlashish kerak
 
+
+// ===================================================
+// ===================================================
+
+// lesson 27 
+
+// lazy load
+// portal
+// profiler -> react dev tools bilan bir xil

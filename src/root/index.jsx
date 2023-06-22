@@ -1,23 +1,57 @@
-import React, { useState } from "react";
+import React, { Profiler } from "react";
+import Modal from "./modal";
+// import { Route, Routes, NavLink } from "react-router-dom";
+// import Counter from "./counter";
+// const Hover = React.lazy(() => import("./hover"));
 
 const Root = () => {
-  const [counter, setCounter] = useState(0);
-  const [state, setState] = useState(`${counter} toq ham juft ham emas`);
-  const Plus = () => {
-    fetch('https://jsonplaceholder.typicode.com/todos/1').then(() => {
-      setCounter(counter + 1);
-      setState((counter + 1) % 2 === 0 ? "juft son" : "toq son");
-    })
+  const onRender = (
+    id,
+    phase,
+    acutalDuration,
+    baseDuration,
+    startTime,
+    commitTime,
+    interactions
+  ) => {
+
+  console.table({
+    id,
+    phase,
+    acutalDuration,
+    baseDuration,
+    startTime,
+    commitTime,
+    interactions
+  })
+
   };
-  console.log('re-render');
   return (
-    <div>
+    <Profiler id="modal" onRender={onRender}>
       <h1>React 17V</h1>
-      <h1>Counter: {state}</h1>
-      <h1>Counter: {counter}</h1>
-      <button onClick={Plus}>+</button>
-    </div>
+      <Modal />
+    </Profiler>
   );
 };
 
 export default Root;
+
+{
+  /* <div>
+<NavLink to={"/counter"}> Counter </NavLink>
+<NavLink to={"/hover"}> Hover </NavLink>
+</div>
+<div>
+<Routes>
+  <Route path="/counter" element={<Counter />} />
+  <Route
+    path="/hover"
+    element={
+      <React.Suspense fallback={<h1>Loading....</h1>}>
+        <Hover />
+      </React.Suspense>
+    }
+  />
+</Routes>
+</div> */
+}
