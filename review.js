@@ -670,3 +670,29 @@
 //     }
 //     return Function
 // }
+
+// ===================================================
+// ===================================================
+
+
+// lesson 26
+
+// React 18V --> concurrent mode
+// Batching -> flushSync
+
+// useTransition => optimization ni tezlashtirib  beradi
+// isPending => true yoki false qaytaradi. Ma'lumotni tutib kelyaptimi yo'qmi shuni ko'rsatadi
+// startTransition => privarity ni pasaytirib beradi yani ikkinchi darajali ma'lumot
+
+// startTransition => class componentlar bilan ishlatilinadi
+// useDefferedValue => parent componentdan prop kelganda ishlatiladi va bitta value oladi
+
+// 17V - Suspense => lazy => commmentga olib qo'ygan bilan bir xil yani display: none qilib qo'yadi
+// 18V - Suspense => GraphQl bilan ishlaydi => Suspense ichidagi ma'lumotni o'chirib tashlagan bilan bir xil qachon beckenddan ma'lumot kelsagina bor qilib qo'yadi
+// Suspense => ichidagi ma'lumotga display: none qiymatini qo'shib qo'yadi
+// GraphQl => fetch ga oxshaydi va faqat bitta endpoint bo'ladi
+// suspenseList
+
+// useId => unique id yasab oladi
+// useDebugValue => custom hooks bilan ishlaydi va kerakli bo'lganda ishlatish kerak maksimal bundan yiroqlashish kerak
+
